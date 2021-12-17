@@ -1,0 +1,239 @@
+/************* @@@ Global CSS @@@@@@@@ ***********/
+
+:root {
+  --fontSize: 0.9em;
+  --fontSizeTitle: 2.3em;
+  --fontColor: #181b21;
+  --scrollMode: smooth;
+}
+
+html {
+  scroll-behavior: var(--scrollMode);
+}
+
+.section_buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2em;
+}
+
+.button {
+  width: 240px;
+  height: 40px;
+  background-color: hsla(0, 0%, 100%, 0.5);
+  color: var(--fontColor) !important;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.7em;
+  justify-content: center;
+  margin: 0em 0.5em;
+  box-sizing: border-box;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.active {
+  background-color: #181b21 !important;
+  color: white !important;
+}
+.section_title {
+  color: var(--fontColor) !important;
+  font-weight: bold;
+  font-size: var(--fontSizeTitle);
+  color: var(--fontColor);
+  margin-bottom: 4px;
+}
+
+.section_link {
+  color: rgb(97, 96, 96) !important;
+}
+
+/*************** @@@ GlobalSection @@@ **********/
+
+.scroll_animation_container {
+  scroll-behavior: smooth;
+}
+
+.global_section {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(212, 211, 211, 0.753);
+}
+
+/**************** @@@ NavBar @@@ ******************/
+.navbar_container {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0em 1em;
+  color: var(--fontColor);
+  font-size: var(--fontSize);
+}
+
+.navbar_logo {
+  flex: 30%;
+}
+.navbar_logo img {
+  height: 100% !important;
+}
+
+.navbar_logo img:hover {
+  cursor: pointer;
+}
+
+.navbar_elements {
+  height: 100% !important;
+  flex: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.navbar_elements ul li {
+  display: inline-block;
+  padding: 0.5em 1em;
+  list-style: none;
+}
+
+.navbar_elements ul li:hover {
+  background-color: rgba(199, 202, 221, 0.883);
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+/************* @@@ Section1 @@@@ ************/
+
+.section_1_container {
+  width: 100%;
+  height: 100vh;
+  background-image: url("./images/model3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/************* @@@ Section2 @@@@ ************/
+
+.section_2_container {
+  width: 100%;
+  height: 100vh;
+  background-image: url("./images/model_y.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/************* @@@ Section3 @@@@ ************/
+
+.section_3_container {
+  width: 100%;
+  height: 100vh;
+  background-image: url("./images/model_s.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/************* @@@ Section4 @@@@ ************/
+
+.section_4_container {
+  width: 100%;
+  height: 100vh;
+  background-image: url("./images/model_x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/************* @@@ Section5 @@@@ ************/
+
+.section_5_container {
+  width: 100%;
+  height: 100vh;
+  background-image: url("./images/powerwall.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/************* @@@ Section6 @@@@ ************/
+
+.section_6_container {
+  width: 100%;
+  height: 100vh;
+  background-image: url("./images/recharge.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/************ @@@ Middle Section @@@ **************/
+@keyframes dis {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.middle_section_container {
+  width: 50%;
+  height: 700px;
+  display: flex;
+  top: 0;
+  position: fixed;
+  flex-direction: column;
+  margin-top: 80px;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s;
+}
+
+.hide_middle_section_container {
+  visibility: hidden;
+  opacity: 0;
+}

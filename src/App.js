@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useEffect } from "react";
+import Global_section from "./components/Global_section.jsx";
+import { ChangeScrollMode } from "./components/Util";
 function App() {
+  const changeMode = () => {
+    let style = getComputedStyle(document.body);
+    const mode1 = "smooth";
+    const mode2 = "auto";
+    window.addEventListener("mousedown", () => {
+      document.body.style.setProperty("--scrollMode", mode2);
+    });
+    document.body.style.setProperty("--scrollMode", mode1);
+  };
+  useEffect(() => {
+    changeMode();
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Global_section />
     </div>
   );
 }
